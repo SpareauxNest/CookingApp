@@ -13,24 +13,28 @@ public class Ingredient {
         this.quantity = quantity;
     }
 
-    public String getName() {
-        return name;
+    public static Ingredient build(String name, int quantity, String unit){
+        return new Ingredient(name, quantity, unit);
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getName() {
+        return name;
     }
 
     public int getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
     public String getUnit() {
         return unit;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     public void setUnit(String unit) {

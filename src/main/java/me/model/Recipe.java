@@ -10,14 +10,13 @@ public class Recipe {
 
     private String link;
 
-    public Recipe(String name, String link, List<Ingredient> ingredients) {
+    public Recipe(String name, List<Ingredient> ingredients, String link) {
         this.name = name;
-        this.link = link;
         this.ingredients = ingredients;
+        this.link = link;
     }
 
-    public Ingredient addIngredient(String name, int quantity, String unit) {
-        return new Ingredient(name, quantity, unit);
-
+    public static Recipe build(String name, List<Ingredient> ingredients, String link){
+        return new Recipe(name, ingredients, link);
     }
 }
