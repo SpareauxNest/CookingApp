@@ -5,6 +5,7 @@ import me.model.Recipe;
 import org.junit.jupiter.api.*;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -34,6 +35,16 @@ class RecipeBookTest {
     public void createRecipesTest(){
         recipeBook.addRecipe(testRecipe1);
         List<Recipe> actual = recipeBook.addRecipe(testRecipe2);
+        Assertions.assertEquals(actual, testRecipes);
+    }
+
+    @Test
+    public void deleteRecipeTest(){
+        List<Recipe> expected = Collections.singletonList(testRecipe2);
+        recipeBook.addRecipe(testRecipe1);
+        recipeBook.addRecipe(testRecipe2);
+        recipeBook.addRecipe(testRecipe1);
+        List<Recipe> actual = recipeBook.deleteRecipe(testRecipe1.getId());
         Assertions.assertEquals(actual, testRecipes);
     }
 }
