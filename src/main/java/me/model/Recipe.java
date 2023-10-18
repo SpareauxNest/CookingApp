@@ -4,7 +4,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class Recipe {
-    private UUID id;
+
+    private String id;
 
     private String name;
 

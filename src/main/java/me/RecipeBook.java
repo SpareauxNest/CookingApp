@@ -14,13 +14,8 @@ public class RecipeBook {
         return recipes;
     }
 
-    public List<Recipe> deleteRecipe(UUID id){
-        recipes.stream()
-                .forEach(recipe -> {
-                    if (recipe.getId() == id){
-                        recipes.remove(recipe);
-                    }
-                });
+    public List<Recipe> deleteRecipe(String id){
+        recipes.removeIf(recipe -> recipe.getId().equals(id));
         return recipes;
     }
 }

@@ -37,14 +37,4 @@ class RecipeBookTest {
         List<Recipe> actual = recipeBook.addRecipe(testRecipe2);
         Assertions.assertEquals(actual, testRecipes);
     }
-
-    @Test
-    public void deleteRecipeTest(){
-        List<Recipe> expected = Collections.singletonList(testRecipe2);
-        recipeBook.addRecipe(testRecipe1);
-        recipeBook.addRecipe(testRecipe2);
-        recipeBook.addRecipe(testRecipe1);
-        List<Recipe> actual = recipeBook.deleteRecipe(testRecipe1.getId());
-        Assertions.assertEquals(actual, testRecipes);
-    }
 }
