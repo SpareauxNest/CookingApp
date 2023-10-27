@@ -1,11 +1,12 @@
 package me;
 
 import me.model.Recipe;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
+@Service
 public class RecipeBook {
     private List<Recipe> recipes = new ArrayList<>();
 

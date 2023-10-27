@@ -2,11 +2,12 @@ package me;
 
 import me.model.Ingredient;
 import me.model.Recipe;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
         RecipeBook recipeBook = new RecipeBook();
@@ -26,6 +27,6 @@ public class Main {
 
         List<Recipe> recipes1 = recipeBook.deleteRecipe(garlicButter.getId());
         System.out.println(recipes1.size());
-        recipes1.stream().forEach(recipe -> System.out.println(recipe.getId()));
+        recipes1.stream().forEach(recipe -> System.out.println(recipe.getName()));
     }
 }

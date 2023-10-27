@@ -1,17 +1,20 @@
 package me.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.stereotype.Component;
+
 import java.util.List;
 import java.util.UUID;
 
+@Getter
+@Setter
+@Component
 public class Recipe {
 
     private String id;
 
     private String name;
-
-    public String getId() {
-        return id;
-    }
 
     private List<Ingredient> ingredients;
 
