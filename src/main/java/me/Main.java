@@ -25,6 +25,7 @@ public class Main {
 
 
         List<Recipe> recipes1 = recipeBook.deleteRecipe(garlicButter.getId());
-        System.out.println(recipes1);
+        System.out.println(recipes1.size());
+        recipes1.stream().forEach(recipe -> System.out.println(recipe.getId()));
     }
 }
