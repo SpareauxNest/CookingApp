@@ -9,7 +9,7 @@ public class Recipe {
 
     private String name;
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
@@ -18,7 +18,7 @@ public class Recipe {
     private String link;
 
     public Recipe(String name, List<Ingredient> ingredients, String link) {
-        this.id = UUID.randomUUID();
+        this.id = UUID.randomUUID().toString();
         this.name = name;
         this.ingredients = ingredients;
         this.link = link;
